@@ -1,6 +1,6 @@
 /*
-   filename: SPI_Wemos_Master_v7.ino (to be used in conjunction with SPI_Uno_Slave_v7
-   target: WEMOS (ESP8266) used as the MASTER SPI device
+   filename: SPI_Wemos_Master.ino (to be used in conjunction with SPI_Uno_Slave
+   target: WEMOS (ESP8266) used as the MASTER SPI device (connected to a UNO SPI SLAVE)
    Date: 13 Aug 2018
    Author J.Richards
 
@@ -95,7 +95,7 @@
 // XXXX == "U1" in hex 0x5531 for Uno1 .  (This is for fun but maye helpful if you have run out of SS pins See Note2
 // YY can be 'R' 'H' 'L' 'T' 'O' or 'I' or make up your own
 // ZZ is typically a a pin number between 2 and 13.
-// So to set pin 6 High on the UNO send_cmd(cmdUNO1PINHIGH | 6);
+// So to set pin 6 High on the UNO insert the following command -> send_cmd(cmdUNO1PINHIGH | 6);
 // This will send HEX pattern 0x55314805 i.e. 'U' = 0x55, '1' = 0x31, 'H' = 0x48 and 6 is 06.
 
 #define UNO1_ADDR ('U'<<24UL)| ('1'<<16UL) //Unique address for UNO See Note2
